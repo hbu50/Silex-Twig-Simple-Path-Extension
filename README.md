@@ -25,7 +25,7 @@ $twig->addExtension(new \Toranj\Twig\Extension\ToranjExtension($app));
 $app->get('/', function() use (&$app)
     {
         return $app['twig']->render('index.html.twig', array());
-    });
+    })->bind('homepage');;
 
 $app->run();
 ```
